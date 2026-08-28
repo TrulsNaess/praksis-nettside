@@ -1,82 +1,101 @@
-export default function Home() {
+import Link from "next/link";
+
+type ColorType = "blue" | "purple" | "green";
+
+export default function HomePage() {
+    const sections: Array<{
+        title: string;
+        href: string;
+        description: string;
+        color: ColorType;
+    }> = [
+        {
+            title: "Studentene",
+            href: "/studentene",
+            description: "Møt Mads og Truls – to studenter fra UiA med solid erfaring fra samarbeid.",
+            color: "blue",
+        },
+        {
+            title: "Prosjektet",
+            href: "/prosjekt",
+            description: "Se detaljer om inventory-appen, funksjonalitet og målsetninger.",
+            color: "purple",
+        },
+        {
+            title: "Bedriften",
+            href: "/bedrift",
+            description: "Lær om Thon Hotel Kristiansand og oppgavene vi skal løse i praksis.",
+            color: "green",
+        },
+    ];
+
+    const colorClasses: Record<ColorType, string> = {
+        blue: "hover:border-blue-600 hover:shadow-blue-200",
+        purple: "hover:border-purple-600 hover:shadow-purple-200",
+        green: "hover:border-green-600 hover:shadow-green-200",
+    };
+
     return (
-        <main className="min-h-screen bg-[#fafafa] text-[#111111]">
-
-            <section className="mx-auto flex min-h-screen max-w-6xl items-center px-6 py-20">
-                <div className="max-w-3xl">
-                    <p className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
-                        Praksisprosjekt
-                    </p>
-
-                    <h1 className="text-5xl font-semibold tracking-tight md:text-7xl">
-                        Et prosjekt jeg har jobbet med i praksis.
+        <section className="space-y-20">
+            {/* Hero Section */}
+            <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl blur-3xl opacity-40"></div>
+                <div className="relative text-center space-y-6 py-12">
+                    <h1 className="text-6xl font-black text-gray-900 tracking-tighter">
+                        Praksis 2026
                     </h1>
-
-                    <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-600">
-                        Her skal vi presentere praksisperioden, prosjektet,
-                        prosessen og resultatet på en enkel og profesjonell måte.
+                    <h2 className="text-3xl font-bold text-red-700">
+                        Thon Hotel Kristiansand
+                    </h2>
+                    <p className="text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed font-light">
+                        To studenter fra Universitetet i Agder utvikler en moderne inventory-app 
+                        som skal transformere lagerstyrningen ved Thon Hotel Kristiansand.
                     </p>
+                </div>
+            </div>
 
-                    <div className="mt-10 flex gap-4">
-                        <a
-                            href="#prosjekt"
-                            className="rounded-full bg-black px-6 py-3 text-sm font-medium text-white transition hover:bg-gray-800"
-                        >
-                            Se prosjektet
-                        </a>
+            {/* Section Cards */}
+            <div className="grid md:grid-cols-3 gap-8">
+                {sections.map((section, idx) => (
+                    <Link key={idx} href={section.href} className="no-underline group">
+                        <div className={`bg-white border-2 border-gray-200 rounded-xl p-8 h-full hover:shadow-2xl transition-all duration-300 cursor-pointer space-y-4 ${colorClasses[section.color]}`}>
+                            <div className="flex items-start justify-between">
+                                <h3 className="text-2xl font-bold text-red-700 group-hover:translate-x-1 transition">
+                                    {section.title}
+                                </h3>
+                                <span className="text-2xl opacity-0 group-hover:opacity-100 transition">→</span>
+                            </div>
+                            <p className="text-gray-600 leading-relaxed min-h-16">
+                                {section.description}
+                            </p>
+                            <div className="pt-4 text-red-700 font-semibold flex items-center gap-2 opacity-0 group-hover:opacity-100 transition transform translate-y-2 group-hover:translate-y-0">
+                                Les mer <span className="inline-block group-hover:translate-x-1 transition">→</span>
+                            </div>
+                        </div>
+                    </Link>
+                ))}
+            </div>
 
-                        <a
-                            href="#om"
-                            className="rounded-full border border-gray-300 px-6 py-3 text-sm font-medium transition hover:bg-gray-100"
-                        >
-                            Om prosjektet
-                        </a>
+            {/* Info Section */}
+            <div className="bg-white border-l-4 border-red-700 p-10 rounded-xl shadow-lg space-y-5">
+                <h3 className="text-3xl font-bold text-gray-900">Hva vi gjør</h3>
+                <p className="text-gray-700 leading-relaxed text-lg">
+                    I praksisperioden utvikler vi en profesjonell løsning for lagerstyring som skal 
+                    gi Thon Hotel Kristiansand bedre kontroll over varebeholdning, redusere feil i 
+                    operasjoner og effektivisere daglig drift. Vi fokuserer både på den tekniske 
+                    implementasjonen og på å skape en løsning som faktisk fungerer i praksis.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6 pt-4">
+                    <div className="space-y-2">
+                        <h4 className="font-bold text-red-700 text-lg">Mål</h4>
+                        <p className="text-gray-600">Prototype som kan pitches til Thon sentralt</p>
+                    </div>
+                    <div className="space-y-2">
+                        <h4 className="font-bold text-red-700 text-lg">Fokus</h4>
+                        <p className="text-gray-600">Inventory-styring og demo-kassesystem</p>
                     </div>
                 </div>
-            </section>
-
-            <section
-                id="om"
-                className="border-t border-gray-200 bg-white px-6 py-24"
-            >
-                <div className="mx-auto max-w-6xl">
-                    <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
-                        01 — Om prosjektet
-                    </p>
-
-                    <h2 className="mt-4 text-4xl font-semibold tracking-tight">
-                        Hva handler prosjektet om?
-                    </h2>
-
-                    <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600">
-                        Her skal vi senere skrive om hva praksisprosjektet gikk ut på,
-                        hvilket problem som skulle løses og hvilken rolle du hadde.
-                    </p>
-                </div>
-            </section>
-
-            <section
-                id="prosjekt"
-                className="px-6 py-24"
-            >
-                <div className="mx-auto max-w-6xl">
-                    <p className="text-sm font-medium uppercase tracking-[0.2em] text-gray-500">
-                        02 — Prosjektet
-                    </p>
-
-                    <h2 className="mt-4 text-4xl font-semibold tracking-tight">
-                        Løsningen
-                    </h2>
-
-                    <div className="mt-10 rounded-3xl border border-gray-200 bg-white p-8">
-                        <p className="text-gray-600">
-                            Her kommer screenshots, beskrivelse av løsningen,
-                            teknologi og andre detaljer.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-        </main>
+            </div>
+        </section>
     );
 }
