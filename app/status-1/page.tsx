@@ -1,183 +1,126 @@
 export default function Status1Page() {
     return (
         <section className="space-y-12">
-            <div className="text-center space-y-6">
+            <div className="text-center space-y-4">
                 <h1 className="text-5xl font-bold text-gray-900">Status 1</h1>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Rapport fra første fase av praksisperioden
-                </p>
+                <p className="text-lg text-gray-600">Hva vi har gjort så langt</p>
             </div>
 
             {/* Video Section */}
             <div className="bg-white border-2 border-gray-200 rounded-xl p-8 shadow-lg">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Presentasjon fra Bedriften</h2>
-                <div className="w-full bg-gray-200 rounded-lg overflow-hidden flex items-center justify-center h-96 border-2 border-gray-300">
-                    <div className="text-center">
-                        <span className="text-gray-500 text-lg font-medium">Videoplasseres – kommer snart</span>
-                    </div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Presentasjon</h2>
+                <div className="w-full bg-gray-200 rounded-lg h-80 flex items-center justify-center border-2 border-gray-300">
+                    <span className="text-gray-500">Video kommer snart</span>
                 </div>
-                <p className="text-gray-600 text-sm mt-4">
-                    Her vil vi publisere en video fra bedriften og en presentasjon av prosjektet vårt.
+            </div>
+
+            {/* Bedriften - kort */}
+            <div className="space-y-3">
+                <h2 className="text-2xl font-bold text-gray-900">Bedriften</h2>
+                <p className="text-gray-700 leading-relaxed">
+                    Thon Hotel Kristiansand er en større hotellbedrift med resepsjon, booking, renhold, 
+                    frokostservering og konferansevirksomhet. Gjennom samtaler med ansatte identifiserte vi at 
+                    lagerstyring er et område hvor det finnes behov for forbedring.
                 </p>
             </div>
 
-            {/* About the Company Section */}
+            {/* What we've done */}
             <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-gray-900">Om Bedriften</h2>
-                <div className="space-y-4">
-                    <div className="bg-white border-l-4 border-red-700 p-8 rounded-lg">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">Thon Hotel Kristiansand</h3>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Vi har praksis ved Thon Hotel Kristiansand, en større bedrift som driver moderne 
-                            hotellvirksomhet. Den daglige driften består av flere sentrale funksjoner: resepsjon, 
-                            booking, renhold, frokostservering og konferansevirksomhet. For at hotellet skal 
-                            fungere effektivt, må mange ulike arbeidsoppgaver og avdelinger samarbeide seamlessly.
-                        </p>
-                        <p className="text-gray-700 leading-relaxed">
-                            Thon Hotel Kristiansand er en del av Thon Hotel-kjeden, som er en av Norges største 
-                            hotelkjeder. Som en større bedrift handler det om å opprettholde høy service-kvalitet, 
-                            håndtere komplekse operasjoner og sikre effektiv ressursforvaltning på tvers av 
-                            flere avdelinger.
-                        </p>
-                    </div>
+                <h2 className="text-3xl font-bold text-gray-900">Hva vi har gjort</h2>
+
+                <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Fase 1: Behovskartlegging</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                        Vi brukte første del av praksisen på å bli kjent med hotellet, møte ansatte og resepsjonssjefen 
+                        (vår kontaktperson). Gjennom direkte dialog identifiserte vi at <strong>lagerstyring</strong> 
+                        er området med størst potensial for forbedring. De ansatte mangler en enkel måte å få oversikt 
+                        over varebeholdning og når det må fylles på.
+                    </p>
+                </div>
+
+                <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded-lg">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">Fase 2: Teknisk oppstart</h3>
+                    <p className="text-gray-700 leading-relaxed mb-4">
+                        Vi har satt opp en profesjonell backendstruktur i <strong>ASP.NET Core (.NET 9)</strong>. 
+                        Backend er konfigurert som Web API siden frontend skal bygges separat i Next.js/React – 
+                        dette gjør det enklere å holde backend og frontend løst koblet, som er best practice for moderne applikasjoner.
+                    </p>
+                    <p className="text-gray-700 text-sm">
+                        <strong>Struktur:</strong> Controllers (API-endepunkter), Models (databaseentiteter), DTOs 
+                        (data transfer objects), Services (forretningslogikk), Entity Framework Data Context, SignalR 
+                        (realtime-oppdateringer), og Extensions (konfigurasjon). Dette gir en skalerbar arkitektur 
+                        som er lett å teste og vedlikeholde.
+                    </p>
                 </div>
             </div>
 
-            {/* What we've done so far */}
-            <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-gray-900">Hva vi har gjort så langt</h2>
-                <div className="space-y-4">
-                    <div className="bg-blue-50 border-l-4 border-blue-600 p-8 rounded-lg">
-                        <h3 className="text-xl font-bold text-gray-900 mb-4">Behovskartlegging & Oppstart</h3>
-                        <p className="text-gray-700 leading-relaxed mb-3">
-                            I starten av praksisperioden brukte vi tid på å bli kjent med bedriften og forstå 
-                            hvordan Thon Hotel Kristiansand drives. Vi etablerte gruppen vår og møtte resepsjonssjefen, 
-                            som er vår dedikerte kontaktperson gjennom hele praksisperioden.
-                        </p>
-                        <p className="text-gray-700 leading-relaxed">
-                            Gjennom dialog med resepsjonssjefen og hotellets ansatte ble det klart at 
-                            <strong> lagerstyring </strong> er et område med betydelig potensial for forbedring. 
-                            De ansatte etterspør en enklere, mer systematisk måte å få oversikt over varebeholdning, 
-                            mengder på lager, og når det er behov for påfyll eller bestillinger.
-                        </p>
-                    </div>
-                </div>
+            {/* Plan forward */}
+            <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-gray-900">Planen videre</h2>
+                <p className="text-gray-700 leading-relaxed">
+                    Vi skal bygge en inventory-app med live oppdateringer av varebeholdning. Appen skal gjøre det 
+                    enkelt for ansatte å registrere uttak og påfyll, få oversikt over varer fordelt på rom og 
+                    kategorier, og se oppdatert varebeholdning i sanntid. Løsningen skal være brukervennlig og 
+                    potensielt kunne pitches til Thon sentralt.
+                </p>
+                <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-3">
+                        <span className="text-red-700 font-bold">→</span>
+                        <span><strong>Backend API-endepunkter</strong> for inventory-operasjoner (opprettelse, oppdatering, sletting av varer)</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                        <span className="text-red-700 font-bold">→</span>
+                        <span><strong>Frontend i Next.js</strong> med intuitiv UI for ansatte som skal bruke systemet daglig</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                        <span className="text-red-700 font-bold">→</span>
+                        <span><strong>Realtime-oppdateringer</strong> via SignalR slik at endringer i lagerbeholdningen synes umiddelbar</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                        <span className="text-red-700 font-bold">→</span>
+                        <span><strong>Brukertest</strong> med hotellets ansatte for tilbakemeldinger og iterative forbedringer</span>
+                    </li>
+                </ul>
             </div>
 
-            {/* Our project */}
-            <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-gray-900">Prosjektet Vårt</h2>
-                <div className="space-y-4">
-                    <div className="bg-green-50 border-l-4 border-green-600 p-8 rounded-lg">
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Vi har fått beskjed om at vi skal lage en <strong>prototype 
-                            på et digitalt lagerstyringssystem</strong>. Målet er å gjøre det enklere for ansatte 
-                            å holde oversikt over varebeholdningen og registrere varer som går inn og ut av lageret.
-                        </p>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Vi er allerede i gang med å planlegge løsningen – hvilke funksjoner som er viktigst å 
-                            prioritere innenfor den tiden vi har, og hvordan systemet best kan løse de identifiserte 
-                            utfordringene. Vårt fokus er å utvikle løsningen i samarbeid med hotellet, slik at 
-                            vi underveis kan få direkte tilbakemeldinger fra de ansatte som skal bruke systemet.
-                        </p>
-                        <p className="text-gray-700 leading-relaxed">
-                            Dersom prototypen fungerer godt, er hotellet også åpne for at vi presenterer og pitcher 
-                            prosjektet videre – potensielt til andre lokaler i Thon-kjeden. Dette gjør prosjektet 
-                            ekstra spennende fordi vi får muligheten til å utvikle noe som tar utgangspunkt i 
-                            reelle behov og potensielt kan ha verdi langt utover selve praksisoppgaven. Dette er jo
-                            hyptotetisk, men det er et spennende mål som motiverer oss til å levere noe bra!
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            {/* Our work environment */}
-            <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-gray-900">Arbeidshverdagen Vår</h2>
-                <div className="space-y-4">
-                    <div className="bg-white border-2 border-gray-200 p-8 rounded-lg">
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Vi har fått tilgang til et <strong>konferanserom på hotellet</strong> som vi skal bruke som 
-                            arbeidsplass. Her kan vi jobbe sammen på utviklingen, samtidig som vi befinner oss fysisk 
-                            i bedriften. Dette gir oss muligheten til enkelt å snakke med ansatte, stille spørsmål 
-                            underveis, og teste ideene våre direkte med brukerne.
-                        </p>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Vi kommer til å kombinere <strong>arbeid på hotellet med hjemmekontor-dager</strong> 
-                            for å ha fleksibilitet i arbeidsmåten vår. Dette lar oss både være nær bedriften når 
-                            det er viktig, og ha fokus-tid for design- og utviklingarbeid hjemme. Dersom 
-                            konferanserommet er opptatt vil vi fokusere på hjemmekontor.
-                        </p>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            En viktig erkjennelse fra denne første fasen er at en større bedrift som et hotell er 
-                            svært kompleks – det handler ikke bare om selve systemutviklingen. Vi lærer også mye om 
-                            hvordan en større organisasjon fungerer, hvordan ulike systemer og avdelinger henger 
-                            sammen, og hvor viktig det er å utvikle digitale løsninger basert på reelle 
-                            brukerbehov.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            {/* Current status */}
-            <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-gray-900">Hvor vi er nå</h2>
-                <div className="space-y-4">
-                    <div className="bg-purple-50 border-l-4 border-purple-600 p-8 rounded-lg">
-                        <p className="text-gray-700 leading-relaxed mb-3">
-                            <strong>Status:</strong> Vi har gjennomført behovskartlegging, møtt bedriftens 
-                            ansatte, og definert prosjektomfanget. Pga dårlig planlegging fra vår side har vi 
-                            startet litt <strong>tregere enn vi ideelt sett hadde håpet</strong> – men vi er 
-                            nå i gang og klar til å bygge videre. Vi er veldig positive for å jobbe ekstra for
-                            å ha god tid til å levere på et høyt nok nivå.
-                        </p>
-                        <p className="text-gray-700 leading-relaxed">
-                            <strong>Neste steg:</strong> Vi skal nå gå videre med design og teknisk utvikling av 
-                            lagerstyringssystemet. Vi planlegger å teste løsningen sammen med hotellet og iterere 
-                            på bakgrunn av tilbakemeldinger.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            {/* Work assignments */}
-            <div className="space-y-6">
+            {/* Our work */}
+            <div className="space-y-4">
                 <h2 className="text-3xl font-bold text-gray-900">Arbeidsoppgaver</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-white border-2 border-gray-200 p-6 rounded-lg">
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">Mads Furås Malmin</h3>
-                        <ul className="space-y-2 text-gray-700">
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-700 font-bold">•</span>
-                                <span>Design og brukergrensesnitt (UX/UI)</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-700 font-bold">•</span>
-                                <span>Prototyping og brukertest</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-700 font-bold">•</span>
-                                <span>Frontend-utvikling</span>
-                            </li>
+                        <h3 className="text-lg font-bold text-gray-900 mb-1">Mads Furås Malmin</h3>
+                        <p className="text-gray-600 text-sm mb-3">Frontend & UX</p>
+                        <ul className="space-y-1 text-gray-700 text-sm">
+                            <li>• Design av brukergrensesnitt</li>
+                            <li>• Prototyping og brukertest</li>
+                            <li>• React/Next.js frontend-utvikling</li>
                         </ul>
                     </div>
                     <div className="bg-white border-2 border-gray-200 p-6 rounded-lg">
-                        <h3 className="text-xl font-bold text-gray-900 mb-3">Truls Næss</h3>
-                        <ul className="space-y-2 text-gray-700">
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-700 font-bold">•</span>
-                                <span>Prosjektledelse og koordinering</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-700 font-bold">•</span>
-                                <span>Backend-utvikling og database</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="text-red-700 font-bold">•</span>
-                                <span>Teknisk arkitektur</span>
-                            </li>
+                        <h3 className="text-lg font-bold text-gray-900 mb-1">Truls Næss</h3>
+                        <p className="text-gray-600 text-sm mb-3">Backend & Prosjektledelse</p>
+                        <ul className="space-y-1 text-gray-700 text-sm">
+                            <li>• Prosjektledelse og koordinering</li>
+                            <li>• ASP.NET Core backend og API-utvikling</li>
+                            <li>• Database-design med Entity Framework</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+
+            {/* Status now */}
+            <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-gray-900">Status nå</h2>
+                <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-lg">
+                    <p className="text-gray-700 mb-3">
+                        <strong>Vi startet litt tregere enn planlagt</strong> grunnet planlegging fra vår side, 
+                        men er nå i full gang. Backend-strukturen er på plass og vi er klar for API-utvikling.
+                    </p>
+                    <p className="text-gray-700">
+                        Vi jobber både på hotellet (for å være nær brukerene og få tilbakemeldinger) og 
+                        hjemmekontor (for fokus-tid på utvikling). <strong>Neste steg:</strong> fullføre API-endepunkter 
+                        og starte frontend-design basert på brukerbehovet.
+                    </p>
                 </div>
             </div>
         </section>
