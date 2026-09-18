@@ -9,8 +9,14 @@ export default function Status1Page() {
             {/* Video Section */}
             <div className="bg-white border-2 border-gray-200 rounded-xl p-8 shadow-lg">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Presentasjon</h2>
-                <div className="w-full bg-gray-200 rounded-lg h-80 flex items-center justify-center border-2 border-gray-300">
-                    <span className="text-gray-500">Video kommer snart</span>
+                <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                    <iframe
+                        className="absolute top-0 left-0 w-full h-full rounded-lg"
+                        src="https://www.youtube.com/embed/2wC1fRXjOME"
+                        title="Status 1 Presentasjon"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    />
                 </div>
             </div>
 
@@ -113,8 +119,9 @@ export default function Status1Page() {
                 <h2 className="text-3xl font-bold text-gray-900">Status nå</h2>
                 <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-lg">
                     <p className="text-gray-700 mb-3">
-                        <strong>Vi startet litt tregere enn planlagt</strong> grunnet planlegging fra vår side, 
-                        men er nå i full gang. Backend-strukturen er på plass og vi er klar for API-utvikling.
+                        <strong>Vi startet litt tregere enn planlagt</strong> dette er vår feil og knyttet til
+                        planleggings problemer, men er nå i full gang. Backend-strukturen er på plass og det er 
+                        en nåværende plan angående design, og vi er klare for API-utvikling.
                     </p>
                     <p className="text-gray-700">
                         Vi jobber både på hotellet (for å være nær brukerene og få tilbakemeldinger) og 
