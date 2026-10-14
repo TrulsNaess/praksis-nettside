@@ -21,13 +21,14 @@ export default function Status2Page() {
                 </div>
             </div>
 
-            <div className="space-y-3">
-                <h2 className="text-2xl font-bold text-gray-900">Bedriften</h2>
-                <p className="text-gray-700 leading-relaxed">
-                    Thon Hotel Kristiansand er en større hotellbedrift med resepsjon, booking, renhold,
-                    frokostservering og konferansevirksomhet. Gjennom samtaler med ansatte og kontaktperson har vi
-                    fortsatt å videreutvikle en løsning som kan gi bedre oversikt og en enklere arbeidshverdag.
-                </p>
+            <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-gray-900">Uttalelse fra bedriften</h2>
+                <div className="bg-white border-2 border-gray-200 p-6 rounded-lg shadow-sm">
+                    <p className="text-gray-700 leading-relaxed">
+                        Fredag den 16. oktober skal vi vise det vi har til nå til vår kontaktperson i bedriften.
+                        Så fort som mulig etter dette legger vi inn hennes tanker og tilbakemeldinger her.
+                    </p>
+                </div>
             </div>
 
             <div className="space-y-6">
@@ -76,6 +77,8 @@ export default function Status2Page() {
                     </p>
                 </div>
             </div>
+
+            
         </section>
     );
 }
