@@ -1,5 +1,5 @@
 export default function Status2Page() {
-    const videoUrl = "https://www.youtube.com/embed/PUT_YOUTUBE_LINK_HERE";
+    const videoUrl = "https://www.youtube.com/embed/QvNqnb9saW0";
 
     return (
         <section className="space-y-12">
