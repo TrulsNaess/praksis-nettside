@@ -61,6 +61,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                     Status 1
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/status-2" className="text-gray-600 hover:text-red-700 px-4 py-2 rounded-lg hover:bg-red-50 transition font-semibold text-red-700">
+                                    Status 2
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/prosjektdagbok" className="text-gray-600 hover:text-red-700 px-4 py-2 rounded-lg hover:bg-red-50 transition font-semibold text-red-700">
+                                    Prosjektdagbok
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
                 </header>
