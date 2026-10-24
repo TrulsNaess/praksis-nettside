@@ -22,11 +22,31 @@ export default function Status2Page() {
             </div>
 
             <div className="space-y-4">
-                <h2 className="text-3xl font-bold text-gray-900">Uttalelse fra bedriften</h2>
-                <div className="bg-white border-2 border-gray-200 p-6 rounded-lg shadow-sm">
+                <h2 className="text-3xl font-bold text-gray-900">
+                    Tilbakemelding fra Thon
+                </h2>
+
+                <div className="bg-white border-2 border-gray-200 p-6 rounded-lg shadow-sm space-y-4">
                     <p className="text-gray-700 leading-relaxed">
-                        Fredag den 16. oktober skal vi vise det vi har til nå til vår kontaktperson i bedriften.
-                        Så fort som mulig etter dette legger vi inn hennes tanker og tilbakemeldinger her.
+                        Behovet til Thon Hotel Kristiansand er en portal tilgjengelig
+                        for ansatte i resepsjonen og ledere, med oversikt over varer.
+                        Applikasjonen bør gi oversikt over eksisterende varer på lager,
+                        inkludert antall, samt bestilte varer med leveringsdato.
+                        Det er også ønskelig med en form for varsling, enten via melding
+                        eller e-post, når lagerbeholdningen er lav.
+                    </p>
+
+                    <p className="text-gray-700 leading-relaxed">
+                        På lengre sikt er det ønskelig at applikasjonen kan integreres
+                        med hotellets eksisterende systemer, slik at solgte varer
+                        automatisk trekkes fra lagerbeholdningen.
+                    </p>
+
+                    <p className="text-gray-700 leading-relaxed">
+                        En slik applikasjon vil forenkle arbeidshverdagen for de ansatte
+                        når det gjelder varetelling og varestatus. Den vil også bidra
+                        til å forhindre at varer blir utsolgt. Designet slik det
+                        fremstår per dags dato, ser lett og oversiktlig ut.
                     </p>
                 </div>
             </div>
