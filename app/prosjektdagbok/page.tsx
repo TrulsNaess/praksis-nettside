@@ -109,6 +109,30 @@ const entries = [
         next: "Fortsette videreutvikling fram mot neste levering.",
         notes: "Dette gjorde løsningen mer brukervennlig for oss som utviklere.",
     },
+
+    {
+        date: "23. oktober",
+        period: "Digitalt",
+        content:
+            "Laget funksjoner for registrering av varer, registrering av svinn, og oversikt over bestilte produkter. Lagt inn statuser og viderearbeidet hovedsiden. Lagde en logg for oversikt over registreringer.",
+        focus: "Funksjonaliteter og features",
+        people: "Truls og Mads",
+        work: "Implementere ønskelige funksjoner, og oversikt.",
+        next: "Gjøre applikasjonen praktisk funksjonell. Gjøre den mer realistisk.",
+        notes: "Endelig fått inn funksjoner som faktisk gjør det applikasjonens mål er.",
+    },
+
+    {
+        date: "28. oktober",
+        period: "Fysisk på skolen",
+        content:
+            "Implementert demokasse for testing. Lagt inn seedingdata så applikasjonen skal se mer realistisk ut. Med design har vi i dag nærmet oss ferdigstilt design. Videreutviklet logg til å kunne vise resultater basert på perioder. Har også ordnet noen problemer med Supabase.",
+        focus: "Praktisk funksjonalitet, realistisk bruk",
+        people: "Truls og Mads",
+        work: "Demokasse siden, seedingdata, design",
+        next: "Kjøre testing med hotellansatte forhåpentligvis.",
+        notes: "Nå begynner applikasjonen å likne en ferdig applikasjon.",
+    },
 ];
 
 export default function ProsjektdagbokPage() {
