@@ -133,6 +133,39 @@ const entries = [
         next: "Kjøre testing med hotellansatte forhåpentligvis.",
         notes: "Nå begynner applikasjonen å likne en ferdig applikasjon.",
     },
+    {
+        date: "4. november",
+        period: "Brukertest på hotellet",
+        content:
+            "Truls og Mads var på hotellet for ny brukertest med hotellpersonalet. Kontaktpersonen vår var ikke til stede, men vi fikk testet løsningen med en resepsjonist og en annen ansatt med blant annet vaktmesteransvar.",
+        focus: "Innhente konkrete forbedringspunkter",
+        people: "Truls, Mads, resepsjonist og ansatt med vaktmesteransvar",
+        work: "Gjennomførte brukertest, fikk tydelig tilbakemelding på hva som bør justeres mot slutten, og fikk sterk bekreftelse på at de ønsker løsningen implementert.",
+        next: "Snakke med kontaktpersonen, få hennes tilbakemeldinger og starte implementering av ønskede endringer.",
+        notes: "Vi fikk også tydelig beskjed om å få inn de andre lagrene i appen.",
+    },
+    {
+        date: "9. november",
+        period: "Møte med kontaktperson",
+        content:
+            "Mads hadde møte med kontaktpersonen på hotellet og gjennomførte ny brukertest. Hun kom med egne ønsker, hvor mye samsvarte med tilbakemeldingene fra uken før, men også med noen designjusteringer og ekstra funksjoner.",
+        focus: "Avklare prioriterte sluttendringer",
+        people: "Mads og kontaktperson i Thon",
+        work: "Samlet inn ønsker knyttet til bestillinger, statuser og registrering av svinn, samt bekreftet at hotellet ønsker å implementere løsningen.",
+        next: "Implementere ønskene, teste hva som er praktisk gjennomførbart og gi tydelig tilbakemelding på urealistiske eller ugunstige forslag.",
+        notes: "Tilbakemeldingene ga oss et godt grunnlag for prioritering av siste utviklingsfase.",
+    },
+    {
+        date: "12. november",
+        period: "Hjemmekontor",
+        content:
+            "Mads og Truls jobbet hjemmefra og fikk implementert nesten alle ønskene fra hotellet. Samtidig valgte vi å prioritere noen spesifikasjoner vi mener gir en mer robust og ryddig løsning.",
+        focus: "Implementering og faglige avklaringer",
+        people: "Truls og Mads",
+        work: "La inn nye lagre med enkle styringsfunksjoner, forbedret struktur for bestillinger og statuser, og justerte flyten for registrering slik at den bygger på konkrete antall.",
+        next: "Presentere det vi vurderer som et nesten ferdigstilt produkt i neste møte.",
+        notes: "Et eksempel på faglig vurdering var å holde fast ved registrering av spesifikke antall i stedet for kun antall kasser for å sikre objektiv og ryddig datakvalitet.",
+    },
 ];
 
 export default function ProsjektdagbokPage() {

@@ -16,6 +16,11 @@ const sections = [
         href: "/bedrift",
         description: "Les om Thon Hotel Kristiansand og oppgavene våre i praksis.",
     },
+    {
+        title: "Refleksjon",
+        href: "/refleksjon",
+        description: "Les avsluttende refleksjon og fyll ut malen for praksisperioden.",
+    },
 ];
 
 const processSteps = [

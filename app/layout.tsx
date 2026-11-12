@@ -71,6 +71,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                                     Prosjektdagbok
                                 </Link>
                             </li>
+                            <li>
+                                <Link href="/refleksjon" className="text-gray-600 hover:text-red-700 px-4 py-2 rounded-lg hover:bg-red-50 transition font-semibold text-red-700">
+                                    Refleksjon
+                                </Link>
+                            </li>
                         </ul>
                     </nav>
                 </header>
