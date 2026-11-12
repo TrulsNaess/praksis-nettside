@@ -24,7 +24,7 @@ export default function RefleksjonPage() {
             <article className="surface-card p-6 md:p-8 grid gap-6 md:grid-cols-[280px_1fr] items-start">
                 <div className="relative h-72 md:h-80 rounded-xl overflow-hidden border border-gray-200 bg-gray-100">
                     <Image
-                        src="/mads.jpg"
+                        src="/Mads.webp"
                         alt="Mads"
                         fill
                         className="object-cover object-[center_40%]"
@@ -33,18 +33,21 @@ export default function RefleksjonPage() {
                 </div>
                 <div className="space-y-4">
                     <h2 className="text-3xl font-bold text-gray-900">Mads</h2>
-                    <p className="text-gray-700 leading-8">
-                        Skriv Mads sin refleksjon her. For eksempel: hva du lærte, hva du bidro med,
-                        hvilke utfordringer du møtte, og hva du vil ta med deg videre.
+
+                    <p className="text-sm text-gray-500 italic">
+                        Praksisperioden hos Thon Hotel Kristiansand har vært veldig lærerik, og jeg har fått erfare hvordan det er å jobbe med et prosjekt som faktisk skal løse et behov i en bedrift. Jeg har hatt mest fokus på frontend og design, og har jobbet mye med hvordan lagerstyringssystemet skal se ut og være enkelt å bruke for de ansatte. Det har vært interessant å se hvor mye løsningen har endret seg underveis etter hvert som vi har fått bedre forståelse for hvordan lageret og rutinene på hotellet fungerer.
                     </p>
-                    <p className="text-sm text-gray-500 italic">Mads sin tekst fylles inn her...</p>
+
+                    <p className="text-sm text-gray-500 italic">
+                        Gjennom praksisen har jeg blitt mer bevisst på hvor viktig det er å utvikle med utgangspunkt i brukeren og den faktiske arbeidshverdagen deres. Jeg har fått brukt mye av det jeg har lært på studiet, samtidig som jeg har fått mer erfaring med å bygge opp et grensesnitt, strukturere informasjon og gjøre løsningen mest mulig oversiktlig. Det jeg tar med meg videre er spesielt erfaringen med frontend og brukerorientert utvikling, og jeg føler at praksisen har gjort meg tryggere på denne typen arbeid.
+                    </p>
                 </div>
             </article>
 
             <article className="surface-card p-6 md:p-8 grid gap-6 md:grid-cols-[280px_1fr] items-start">
                 <div className="relative h-72 md:h-80 rounded-xl overflow-hidden border border-gray-200 bg-gray-100">
                     <Image
-                        src="/truls.png"
+                        src="/Truls.webp"
                         alt="Truls"
                         fill
                         className="object-cover object-[center_40%]"

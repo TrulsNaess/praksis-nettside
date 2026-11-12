@@ -176,24 +176,6 @@ export default function ProsjektdagbokPage() {
                 <p className="text-lg text-gray-600">Dokumentasjon av arbeid, vurderinger og utvikling gjennom praksisperioden</p>
             </div>
 
-            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg space-y-4">
-                <p className="text-gray-700 leading-relaxed">
-                    Prosjektdagboken skal hjelpe oss med å huske hva vi konkret har gjort, dokumentere alternativer og
-                    vurderinger bak det vi gjør, og bevisstgjøre oss selv gjennom skriving. Målet er at dagboken skal
-                    bidra til refleksjon og utvikling gjennom det som kalles reflective practice.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                    Dagboken bør opplyse om tidspunkt for aktiviteten, hovedfokus for dagen, personer vi har arbeidet
-                    med eller vært i møte med, arbeid utført i dag og arbeid til neste gang, nye tema som har dukket
-                    opp, hva som skal tas opp på neste møte og eventuelle spesielle momenter som bør bemerkes.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                    Vi begynte senere i praksis og fikk derfor ikke med oss at denne dagboken skulle føres fra starten.
-                    Vi har skrevet den etter beste evne, og derfor er ikke alle klokkeslett notert. Der vi ikke har
-                    eksakte tider, har vi i stedet brukt datoer eller tidsrom for å vise start og slutt så godt vi kan.
-                </p>
-            </div>
-
             <div className="space-y-6">
                 {entries.map((entry) => (
                     <article key={entry.date} className="bg-white border-2 border-gray-200 rounded-xl p-6 shadow-sm space-y-4">
