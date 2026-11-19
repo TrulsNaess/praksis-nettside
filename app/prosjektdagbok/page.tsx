@@ -166,6 +166,17 @@ const entries = [
         next: "Presentere det vi vurderer som et nesten ferdigstilt produkt i neste møte.",
         notes: "Et eksempel på faglig vurdering var å holde fast ved registrering av spesifikke antall i stedet for kun antall kasser for å sikre objektiv og ryddig datakvalitet.",
     },
+    {
+        date: "19. november",
+        period: "På Skolen",
+        content:
+            "Har finalisert et par siste bugs knyttet til live oppdatering av database. Deretter har hovedoppgaven vært å planlegge hvordan vi kan overføre prosjektet. Vi har skrevet en fyldig avslutningsrapport, og forklart tilgjengelighet til hotellet.",
+        focus: "Videreføring av prosjektet",
+        people: "Truls og Mads",
+        work: "Små fixes, planlegging av overføring av prosjektet, og skriving av avslutningsrapport.",
+        next: "Potensielt møte og planlegge videreføring av prosjektet, og om de ønsker at vi skal fortsette etter praksis.",
+        notes: "",
+    },
 ];
 
 export default function ProsjektdagbokPage() {

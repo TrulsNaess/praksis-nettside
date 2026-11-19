@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 
 const students = [
@@ -11,8 +12,8 @@ const students = [
             "Arbeider hovedsakelig med frontend, brukeropplevelse, struktur og utforming av løsningen. Bidrar også med idéutvikling og dokumentasjon.",
         focus:
             "Opptatt av å utvikle en løsning som er enkel, oversiktlig og effektiv å bruke i arbeidshverdagen.",
-        image: "/mads.jpg",
-        imageClass: "object-cover object-[center_40%]",
+        image: "/Mads.webp",
+        imageClass: "object-cover object-[center_70%]",
     },
     {
         name: "Truls Næss",
@@ -24,8 +25,8 @@ const students = [
             "Arbeider hovedsakelig med backend, database og teknisk struktur, og bidrar med koordinering av utviklingsarbeidet.",
         focus:
             "Fokuserer på en robust teknisk løsning og god sammenheng mellom systemets ulike deler.",
-        image: "/truls.png",
-        imageClass: "object-cover object-[center_40%]",
+        image: "/Truls.webp",
+        imageClass: "object-cover object-[center_20%]",
     },
 ];
 
@@ -42,14 +43,18 @@ export default function StudentenePage() {
 
             <div className="grid md:grid-cols-2 gap-6">
                 {students.map((student) => (
-                    <div key={student.name} className="surface-card overflow-hidden flex flex-col h-full">
-                        <div className="h-72 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-b border-gray-200 relative overflow-hidden">
+                    <div
+                        key={student.name}
+                        className="surface-card overflow-hidden flex flex-col h-full"
+                    >
+                        <div className="h-80 sm:h-96 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-b border-gray-200 relative overflow-hidden">
                             {student.image ? (
                                 <Image
                                     src={student.image}
                                     alt={student.name}
                                     fill
-                                    className={student.imageClass || "object-cover object-center"}
+                                    priority
+                                    className={student.imageClass}
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                 />
                             ) : (
@@ -64,6 +69,7 @@ export default function StudentenePage() {
                                 <div className="inline-block bg-red-50 text-red-700 text-sm font-semibold px-3 py-1 rounded-full mb-4">
                                     {student.role}
                                 </div>
+
                                 <h2 className="text-3xl font-bold text-gray-950">
                                     {student.name}
                                 </h2>
@@ -78,6 +84,7 @@ export default function StudentenePage() {
                                         {student.age} år
                                     </p>
                                 </div>
+
                                 <div className="soft-card p-4">
                                     <p className="text-xs font-extrabold uppercase tracking-wider text-gray-500">
                                         Hjemsted
@@ -127,16 +134,30 @@ export default function StudentenePage() {
 
                 <div className="grid md:grid-cols-3 gap-4 mt-8">
                     <div className="bg-gray-50 p-5 rounded-lg text-center border-t-2 border-red-700">
-                        <p className="font-semibold text-gray-900 mb-1">Bevist samarbeid</p>
-                        <p className="text-sm text-gray-600">Flere prosjekter siden 2. semester</p>
+                        <p className="font-semibold text-gray-900 mb-1">
+                            Bevist samarbeid
+                        </p>
+                        <p className="text-sm text-gray-600">
+                            Flere prosjekter siden 2. semester
+                        </p>
                     </div>
+
                     <div className="bg-gray-50 p-5 rounded-lg text-center border-t-2 border-red-700">
-                        <p className="font-semibold text-gray-900 mb-1">Komplementært</p>
-                        <p className="text-sm text-gray-600">Frontend og backend kompetanse</p>
+                        <p className="font-semibold text-gray-900 mb-1">
+                            Komplementært
+                        </p>
+                        <p className="text-sm text-gray-600">
+                            Frontend og backend kompetanse
+                        </p>
                     </div>
+
                     <div className="bg-gray-50 p-5 rounded-lg text-center border-t-2 border-red-700">
-                        <p className="font-semibold text-gray-900 mb-1">Sterkt team</p>
-                        <p className="text-sm text-gray-600">Delt visjon og verdier</p>
+                        <p className="font-semibold text-gray-900 mb-1">
+                            Sterkt team
+                        </p>
+                        <p className="text-sm text-gray-600">
+                            Delt visjon og verdier
+                        </p>
                     </div>
                 </div>
             </div>

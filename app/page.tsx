@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 const sections = [
@@ -33,10 +34,11 @@ const processSteps = [
 
 const status = [
     { label: "Oppstart", text: "Gjennomført", state: "done" },
-    { label: "Behovskartlegging", text: "Pågår", state: "active" },
-    { label: "Utvikling", text: "Neste fase", state: "upcoming" },
-    { label: "Brukertesting", text: "Neste fase", state: "upcoming" },
-    { label: "Evaluering", text: "Neste fase", state: "upcoming" },
+    { label: "Behovskartlegging", text: "Gjennomført", state: "done" },
+    { label: "Utvikling", text: "Gjennomført", state: "done" },
+    { label: "Brukertesting", text: "Gjennomført", state: "done" },
+    { label: "Evaluering", text: "Gjennomført", state: "done" },
+    { label: "Avslutning og overføring", text: "Sendt", state: "sent" },
 ] as const;
 
 export default function HomePage() {
@@ -134,8 +136,8 @@ export default function HomePage() {
                         Arbeidet steg for steg
                     </h2>
                     <p className="mt-4 text-gray-600 leading-7">
-                        Statusfeltet kan oppdateres underveis og gjør nettsiden til en
-                        enkel dokumentasjon av fremdriften.
+                        Statusfeltet viser fremdriften i prosjektet. Alle prosjektfasene
+                        er nå gjennomført, og avslutning og overføring er sendt.
                     </p>
 
                     <div className="space-y-3 mt-8">
@@ -149,16 +151,21 @@ export default function HomePage() {
                                         "h-2.5 w-2.5 rounded-full",
                                         item.state === "done"
                                             ? "bg-green-600"
-                                            : item.state === "active"
-                                              ? "bg-red-700"
-                                              : "bg-gray-300",
+                                            : item.state === "sent"
+                                                ? "bg-green-600"
+                                                : "bg-gray-300",
                                     ].join(" ")}
                                     aria-hidden="true"
                                 />
                                 <span className="font-semibold text-gray-950">
                                     {item.label}
                                 </span>
-                                <span className="ml-auto text-sm text-gray-500">
+                                <span
+                                    className={`ml-auto text-sm font-semibold ${item.state === "sent"
+                                            ? "text-green-700"
+                                            : "text-gray-500"
+                                        }`}
+                                >
                                     {item.text}
                                 </span>
                             </div>
